@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="shortcut icon" href="images/favicon.png" type="image/png">-->
+    <title>DTM驾校管理系统</title>
+    <link href="../css/style.default.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css"/>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/drag.js"></script>
+    <script src="../js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../js/jquery-ui-1.10.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/modernizr.min.js"></script>
+    <script src="../js/jquery.sparkline.min.js"></script>
+    <script src="../js/toggles.min.js"></script>
+    <script src="../js/retina.min.js"></script>
+    <script src="../js/jquery.cookies.js"></script>
+    <script src="../js/flot/jquery.flot.min.js"></script>
+    <script src="../js/flot/jquery.flot.resize.min.js"></script>
+    <script src="../js/flot/jquery.flot.spline.min.js"></script>
+    <script src="../js/morris.min.js"></script>
+    <script src="../js/raphael-2.1.0.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/bootstrap-datetimepicker.js"></script>
+    <script src="../js/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+<div id="preloader" style="display: none;">
+    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+<section>
+    <!--左侧导航 开始-->
+    <div class="leftpanel">
+        <div class="logopanel">
+            <img src="../images/u21.png" width="240" height="50" alt=""/>
+        </div><!-- logopanel -->
+        <div class="leftpanelinner">
+            <!-- This is only visible to small devices -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media userlogged">
+                    <img alt="" src="../images/photos/loggeduser.png" class="media-object">
+                    <div class="media-body">
+                        <h4>John Doe</h4>
+                        <span>"Life is so..."</span>
+                    </div>
+                </div>
+                <h5 class="sidebartitle actitle">Account</h5>
+                <ul class="nav nav-pills nav-stacked nav-bracket mb30">
+                    <li><a href="profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                    <li><a href=""><i class="fa fa-cog"></i> <span>Account Settings</span></a></li>
+                    <li><a href=""><i class="fa fa-question-circle"></i> <span>Help</span></a></li>
+                    <li><a href="signout.html"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+            <h5 class="sidebartitle"></h5>
+            <ul class="nav nav-pills nav-stacked nav-bracket">
+                <li class="active nav-active nav-parent bmgj-iconshow" style="display: none"><a href="index.html"><i class="fa fa-home"></i> <span>报名管理</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../bmgl/wsbm.html"><i class="fa fa-caret-right"></i>网上报名</a></li>
+                        <li><a href="../bmgl/jybm.html"><i class="fa fa-caret-right"></i>简易报名</a></li>
+                        <li><a href="../bmgl/xybm.html"><i class="fa fa-caret-right"></i>学员报名</a></li>
+                        <li><a href="../bmgl/dbzz.html"><i class="fa fa-caret-right"></i>代办暂住证</a></li>
+                        <li><a href="../bmgl/zjjs.html"><i class="fa fa-caret-right"></i>证件接收</a></li>
+                        <li><a href="../bmgl/fpjs.html"><i class="fa fa-caret-right"></i>发票接收</a></li>
+                        <li><a href="../bmgl/zjlq.html"><i class="fa fa-caret-right"></i>证件领取</a></li>
+                        <li><a href="../bmgl/dayj.html"><i class="fa fa-caret-right"></i>档案移交</a></li>
+                        <li><a href="../bmgl/ylsc.html"><i class="fa fa-caret-right"></i>档案提交车管所</a></li>
+                        <li><a href="../bmgl/xytx.html"><i class="fa fa-caret-right"></i>学员退学</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent xygl-iconshow active nav-active"><a href="email.html"><i class="fa fa-envelope-o"></i> <span>学员管理</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../xygl/xygl.html"><i class="fa fa-caret-right"></i>学员信息查询</a></li>
+                        <li><a href="../xygl/xyzh.html"><i class="fa fa-caret-right"></i>学员综合信息</a></li>
+                        <li><a href="../xygl/jskgl.html"><i class="fa fa-caret-right"></i>计时卡管理</a></li>
+                        <li><a href="../xygl/blscsx.html"><i class="fa fa-caret-right"></i>办理上车手续</a></li>
+                        <li><a href="../xygl/xybg.html"><i class="fa fa-caret-right"></i>学员变更</a></li>
+                        <li><a href="../xygl/xybgjl.html"><i class="fa fa-caret-right"></i>学员变更记录</a></li>
+                        <li><a href="../xygl/scdy.html"><i class="fa fa-caret-right"></i>手册打印</a></li>
+                        <li><a href="../xygl/bgdc.html"><i class="fa fa-caret-right"></i>表格导出</a></li>
+                        <li class="active"><a href="../xygl/dxfs.html"><i class="fa fa-caret-right"></i>短信发送</a></li>
+                        <li><a href="../xygl/xyzhtj.html"><i class="fa fa-caret-right"></i>学员综合统计</a></li>
+                        <li><a href="../xygl/jszgl.html"><i class="fa fa-caret-right"></i>驾驶证管理</a></li>
+                        <li><a href="../xygl/jxbg.html"><i class="fa fa-caret-right"></i>驾校变更</a></li>
+                        <li><a href="../xygl/xypj.html"><i class="fa fa-caret-right"></i>学员评价</a></li>
+                        <li><a href="../xygl/jnzgq.html"><i class="fa fa-caret-right"></i>技能证过期</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent px-iconshow" style="display: none"><a href=""><i class="fa fa-edit"></i> <span>法培培训</span></a>
+                    <ul class="children">
+                        <li><a href="../px/fppx/fpdsz.html"><i class="fa fa-caret-right"></i>法培点设置</a></li>
+                        <li><a href="../px/fppx/fpqs.html"><i class="fa fa-caret-right"></i>法培期数</a></li>
+                        <li><a href="../px/fppx/fpzdy.html"><i class="fa fa-caret-right"></i>法培证打印</a></li>
+                        <li><a href="../px/fppx/fpkqmx.html"><i class="fa fa-caret-right"></i>法培考勤明细</a></li>
+                        <li><a href="../px/fppx/fpbktk.html"><i class="fa fa-caret-right"></i>法培补课调课</a></li>
+                        <li><a href="../px/fppx/skxytj.html"><i class="fa fa-caret-right"></i>上课学员统计</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent px-iconshow active nav-active" style="display: none;"><a href=""><i class="fa fa-suitcase"></i> <span>科目二、三培训</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../px/kmespx/jlcpbgz.html"><i class="fa fa-caret-right"></i>教练车排班规则</a></li>
+                        <li><a href="../px/kmespx/jlypb.html"><i class="fa fa-caret-right"></i>教练员排班</a></li>
+                        <li><a href="../px/kmespx/jlcfl.html"><i class="fa fa-caret-right"></i>教练车放量</a></li>
+                        <li><a href="../px/kmespx/jlcflxg.html"><i class="fa fa-caret-right"></i>教练车放量修改</a></li>
+                        <li><a href="../px/kmespx/xlyy.html"><i class="fa fa-caret-right"></i>训练预约</a></li>
+                        <li><a href="../px/kmespx/yycx.html"><i class="fa fa-caret-right"></i>预约查询</a></li>
+                        <li><a href="../px/kmespx/jlcyycx.html"><i class="fa fa-caret-right"></i>教练车预约查询</a></li>
+                        <li><a href="../px/kmespx/mnxl.html"><i class="fa fa-caret-right"></i>模拟训练</a></li>
+                        <li><a href="../px/kmespx/xlksgz.html"><i class="fa fa-caret-right"></i>训练课时更正</a></li>
+                        <li><a href="../px/kmespx/kscl.html"><i class="fa fa-caret-right"></i>课时处理</a></li>
+                        <li><a href="../px/kmespx/dyyyd.html"><i class="fa fa-caret-right"></i>打印预约单</a></li>
+                        <li><a href="../px/kmespx/jlyksgl.html"><i class="fa fa-caret-right"></i>教练员课时管理</a></li>
+                        <li><a href="../px/kmespx/fjsbxl.html"><i class="fa fa-caret-right"></i>非计时班预约</a></li>
+                        <li><a href="../px/kmespx/jxfl.html"><i class="fa fa-caret-right"></i>集训放量</a></li>
+                        <li><a href="../px/kmespx/jxflcx.html"><i class="fa fa-caret-right"></i>集训放量查询</a></li>
+                        <li><a href="../px/kmespx/jxyy.html"><i class="fa fa-caret-right"></i>集训预约</a></li>
+                        <li><a href="../px/kmespx/bxfl.html"><i class="fa fa-caret-right"></i>补训放量</a></li>
+                        <li><a href="../px/kmespx/bxyy.html"><i class="fa fa-caret-right"></i>补训预约</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent px-iconshow" style="display: none"><a href=""><i class="fa fa-bug"></i> <span>安全文明</span></a>
+                    <ul class="children">
+                        <li><a href="../px/aqwm/aqwm.html"><i class="fa fa-caret-right"></i>安全文明点设置</a></li>
+                        <li><a href="../px/aqwm/aqqs.html"><i class="fa fa-caret-right"></i>安全期数管理</a></li>
+                        <li><a href="../px/aqwm/tkzdy.html"><i class="fa fa-caret-right"></i>听课证打印</a></li>
+                        <li><a href="../px/aqwm/xybk.html"><i class="fa fa-caret-right"></i>学员补课</a></li>
+                        <li><a href="../px/aqwm/aqwmkq.html"><i class="fa fa-caret-right"></i>安全考勤明细</a></li>
+                        <li><a href="../px/aqwm/skxytj1.html"><i class="fa fa-caret-right"></i>上课学员统计</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent ks-iconshow" style="display: none;"><a href=""><i class="fa fa-edit"></i> <span>科一考试</span></a>
+                    <ul class="children">
+                        <li><a href="../ks/kyks/fpksfl.html"><i class="fa fa-caret-right"></i>法培考试放量</a></li>
+                        <li><a href="../ks/kyks/fpksyy.html"><i class="fa fa-caret-right"></i>法培考试预约</a></li>
+                        <li><a href="../ks/kyks/fpkscj.html"><i class="fa fa-caret-right"></i>法培考试成绩</a></li>
+                        <li><a href="../ks/kyks/bksxy.html"><i class="fa fa-caret-right"></i>法培不考试学员</a></li>
+                        <li><a href="../ks/kyks/jgltj.html"><i class="fa fa-caret-right"></i>法培及格率统计</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent ks-iconshow" style="display: none;"><a href="tables.html"><i class="fa fa-th-list"></i> <span>科目二三考试</span></a>
+                    <ul class="children">
+                        <li><a href="../ks/kmesks/kqcs.html"><i class="fa fa-caret-right"></i>考前测试</a></li>
+                        <li><a href="../ks/kmesks/ksfl.html"><i class="fa fa-caret-right"></i>考试放量</a></li>
+                        <li><a href="../ks/kmesks/keksyy.html"><i class="fa fa-caret-right"></i>科目二考试预约</a></li>
+                        <li><a href="../ks/kmesks/kmecj.html"><i class="fa fa-caret-right"></i>科目二成绩</a></li>
+                        <li><a href="../ks/kmesks/kmsyy.html"><i class="fa fa-caret-right"></i>科目三预约</a></li>
+                        <li><a href="../ks/kmesks/kmscj.html"><i class="fa fa-caret-right"></i>科目三成绩</a></li>
+                        <li><a href="../ks/kmesks/kshz.html"><i class="fa fa-caret-right"></i>考试汇总</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent ks-iconshow" style="display: none;"><a href=""><i class="fa fa-bug"></i> <span>安全文明</span></a>
+                    <ul class="children">
+                        <li><a href="../ks/aqwm/aqksfl.html"><i class="fa fa-caret-right"></i>安全考试放量</a></li>
+                        <li><a href="../ks/aqwm/aqksyy.html"><i class="fa fa-caret-right"></i>安全考试预约</a></li>
+                        <li><a href="../ks/aqwm/aqkscj.html"><i class="fa fa-caret-right"></i>安全考试成绩</a></li>
+                        <li><a href="../ks/aqwm/aqksjgltj.html"><i class="fa fa-caret-right"></i>安全考试及格率统计</a></li>
+                        <li><a href="../ks/aqwm/aqbksxy.html"><i class="fa fa-caret-right"></i>安全不考试学员</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent cwgl-iconshow active nav-active" style="display: none"><a href="maps.html"><i class="fa fa-map-marker"></i> <span>财务管理</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../cwgl/gmks.html"><i class="fa fa-caret-right"></i>购买课时</a></li>
+                        <li><a href="../cwgl/kszccf.html"><i class="fa fa-caret-right"></i>考试租车收费</a></li>
+                        <li><a href="../cwgl/gzltj.html"><i class="fa fa-caret-right"></i>工作量统计</a></li>
+                        <li><a href="../cwgl/zhsf.html"><i class="fa fa-caret-right"></i>综合收费</a></li>
+                        <li><a href="../cwgl/jzrqsz.html"><i class="fa fa-caret-right"></i>结账日期设置</a></li>
+                        <li><a href="../cwgl/zsjzhz.html"><i class="fa fa-caret-right"></i>招生结账汇总</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent jcxx-iconshow" style="display: none"><a href=""><i class="fa fa-file-text"></i> <span>基础信息</span></a>
+                    <ul class="children">
+                        <li><a href="../jcxx/xyxxdr.html"><i class="fa fa-caret-right"></i>学员信息导入</a></li>                         <li><a href="../jcxx/bmdsz.html"><i class="fa fa-caret-right"></i>报名点设置</a></li>
+                        <li><a href="../jcxx/bzgl.html"><i class="fa fa-caret-right"></i>班型管理</a></li>
+                        <li><a href="../jcxx/bmtcgz.html"><i class="fa fa-caret-right"></i>报名提成规则</a></li>
+                        <li><a href="../jcxx/sdgl.html"><i class="fa fa-caret-right"></i>时段管理</a></li>
+                        <li><a href="../jcxx/cxgl.html"><i class="fa fa-caret-right"></i>车型管理</a></li>
+                        <li><a href="../jcxx/pxbz.html"><i class="fa fa-caret-right"></i>培训班型</a></li>
+                        <li><a href="../jcxx/jlcda.html"><i class="fa fa-caret-right"></i>教练车档案</a></li>
+                        <li><a href="../jcxx/jlyda.html"><i class="fa fa-caret-right"></i>教练员档案</a></li>
+                        <li><a href="../jcxx/dkhgl.html"><i class="fa fa-caret-right"></i>大客户管理</a></li>
+                        <li><a href="../jcxx/dadgl.html"><i class="fa fa-caret-right"></i>档案袋管理</a></li>
+                        <li><a href="../jcxx/jmb.html"><i class="fa fa-caret-right"></i>价目表</a></li>
+                        <li><a href="../jcxx/yhhdgl.html"><i class="fa fa-caret-right"></i>优惠活动管理</a></li>
+                        <li><a href="../jcxx/csgl.html"><i class="fa fa-caret-right"></i>参数管理</a></li>
+                        <li><a href="../jcxx/bmgl.html"><i class="fa fa-caret-right"></i>部门管理</a></li>
+                        <li><a href="../jcxx/gzllx.html"><i class="fa fa-caret-right"></i>工作量类型</a></li>
+                        <li><a href="../jcxx/lrdgl.html"><i class="fa fa-caret-right"></i>录入点管理</a></li>
+                        <li><a href="../jcxx/yggl.html"><i class="fa fa-caret-right"></i>员工管理</a></li>
+                        <li><a href="../jcxx/txgl.html"><i class="fa fa-caret-right"></i>退学管理</a></li>
+                        <li><a href="../jcxx/zwgl.html"><i class="fa fa-caret-right"></i>职位管理</a></li>
+                        <li><a href="../jcxx/jlcz.html"><i class="fa fa-caret-right"></i>教练车组</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent grzx-iconshow" style="display: none"><a href="layouts.html"><i class="fa fa-laptop"></i> <span>个人中心</span></a>
+                    <ul class="children">
+                        <li><a href="../gezx/xgmm.html"><i class="fa fa-caret-right"></i>修改密码</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent xtgl-iconshow" style="display: none"><a href="layouts.html"><i class="fa fa-laptop"></i> <span>系统管理</span></a>
+                    <ul class="children">
+                        <li><a href="../xtgl/qxgl.html"><i class="fa fa-caret-right"></i>权限管理</a></li>
+                        <li><a href="../xtgl/xtrz.html"><i class="fa fa-caret-right"></i>系统日志</a></li>
+                        <li><a href="../xtgl/zhgl.html"><i class="fa fa-caret-right"></i>账号管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- leftpanelinner -->
+    </div>
+    <!-- 左侧导航 结束 -->
+    <div class="mainpanel">
+        <!--上部导航 开始-->
+        <div class="headerbar">
+            <ul>
+                <li>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon bmgl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">报名管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon
+                xygl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">学员管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon px-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">培训</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon ks-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">考试</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon cwgl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">财务管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon jcxx-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">基础信息</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon grzx-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">个人中心</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon xtgl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">系统管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon tcxt-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">退出系统</div>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--上部导航 结束-->
+        <div class="pageheader">
+            <h2>短信发送</h2>
+        </div>
+        <!--主页面 开始-->
+        <div class="contentpanel">
+            <!--学员报名 开始-->
+            <div class="panel panel-default panel-box">
+                <div class="panel-heading">
+                    <a class="panel-title title-head skdx-show color-ling">上课短信通知</a>
+                    <a class="panel-title title-head ysdx-show color-ling">科目一，四缺课短信通知</a>
+                    <a class="panel-title title-head kesc-show color-ling">科二上车短信通知</a>
+                    <a class="panel-title title-head jjdq-show color-ling">即将到期学员短信通知</a>
+                    <a class="panel-title title-head zhdx-show color-ling">综合短信发送</a>
+                    <a class="panel-title title-head fjsb-show color-ling">非计时班短信发送</a>
+                    <a class="panel-title title-head jxdx-show color-ling">集训短信发送</a>
+                </div>
+                <div class="panel-heading">
+                    <a class="panel-title title-head myks-show color-ling">未约考试提醒</a>
+                    <a class="panel-title title-head ksdx-show color-ling">考试短信通知</a>
+                    <a class="panel-title title-head kshg-show color-ling">考试合格短息通知</a>
+                    <a class="panel-title title-head btgtz-show color-ling">考试未参加和不通过通知</a>
+                    <a class="panel-title title-head kqfd-show color-ling">安全文明考前短信通知</a>
+                </div>
+                <div class="panel-body">
+                    <!--上课短信通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 skdx-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">上课短信通知</a>
+                            <a href="" class="panel-close skdx-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">科目</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">科目一</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">法培期数</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">期数</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" id="w" cols="30" rows="5">{0}学员您好，请于{1}，到校{2}教室{3}号参加法规培训，请您带收据或发票乘坐班车</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-8" style="color:red">{0}：学员姓名；{1}：上课日期；{2}：教室；{3}：座位号<br>大括号加数字部分，如{0}，{1}，{2}为系统内置符号；不能修改，其余部分可以根据需要进行修改</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--科目一，四缺课短信通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 ysdx-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">科目一四缺课通知</a>
+                            <a href="" class="panel-close ysdx-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">科目</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">科目一</option>
+                                        <option value="C1">科目四</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">上课日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" id="w" cols="30" rows="5">{0}学员您好，由于你上期法培课缺勤，请尽快补课，补课后请您登录公交驾校官网www.gjjx.com.cn或拨打客服中心电话60265577预约科目一考试。</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}学员姓名</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;margin-left: 35px;">注：大括号加数字部分，如{0}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--科目一，四缺课短信通知 结束-->
+                    <!--科二上车短信通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 kesc-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">科二上车短信通知</a>
+                            <a href="" class="panel-close kesc-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">操作日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">培训车种</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">C1</option>
+                                        <option value="C2">C2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">不发短信学员</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" id="a" cols="30" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <label class="control-label" style="color: red">提示：多个学习证号以；分隔</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" id="w" cols="30" rows="5">{0}学员您好，恭喜您顺利通过科目一考试，您的学习证号是{1}，现在可预约科目二训练，您可以在公交驾校官网自行约车。</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：学员姓名；{1}：学习证号</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;">注：大括号加数字部分，如{0}，{1}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--科二上车短信通知 结束-->
+                    <!--集训短信发送 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 jxdx-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">集训短信发送</a>
+                            <a href="" class="panel-close jxdx-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-3">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-3">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">科目二</option>
+                                        <option value="C1">科目三</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">0</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">操作日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">学员内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" id="w" cols="30" rows="5">温馨提示，尊敬的学员{0}，请您务必{1}参加集中训练。</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：学员姓名；{1}：学习证号</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;">注：大括号加数字部分，如{0}，{1}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--集训短信发送 结束-->
+                    <!--综合短信发送 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 zhdx-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">综合短信发送</a>
+                            <a href="" class="panel-close zhdx-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">科目</label>
+                                    <div class="col-sm-4">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1">科目一</option>
+                                            <option value="C1" selected>科目二</option>
+                                            <option value="C1">科目三</option>
+                                            <option value="C1">科目四</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">上课期数</label>
+                                    <div class="col-sm-4">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">考试日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">报名日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">领证日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">约车日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">到期日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">手机号</label>
+                                <div class="col-sm-6">
+                                    <textarea name="" id="b" cols="30" rows="2"></textarea>
+                                </div>
+                                <div class="col-sm-4" style="color:red;margin-top: 30px;">
+                                    多个手机号以；分隔
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">学员学习证号</label>
+                                <div class="col-sm-6">
+                                    <textarea name="" id="c" cols="30" rows="2"></textarea>
+                                </div>
+                                <div class="col-sm-4" style="color:red;margin-top: 30px;">
+                                    多个学员以；分隔
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">教练员胸卡号</label>
+                                <div class="col-sm-6">
+                                    <textarea name="" id="c" cols="30" rows="2"></textarea>
+                                </div>
+                                <div class="col-sm-4" style="color:red;margin-top: 30px;">
+                                    多个教练以；分隔
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-6">
+                                    <textarea name="" id="d" cols="30" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4"></div>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--综合短信发送 结束-->
+                    <!--非计时班短信发送 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 fjsb-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">非计时班短信发送</a>
+                            <a href="" class="panel-close fjsb-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-1" style="color:red;font-size: 20px;">
+                                    0
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">开班日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">开班类型</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">非一</option>
+                                        <option value="C1">非二</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">学员内容</label>
+                                <div class="col-sm-6">
+                                    <textarea name="" id="e" cols="30" rows="5">温馨提示：请您务必{0}携带（手册、乘车卡）到[培训业务楼c座一层大厅6号窗口]等待点名再去刷卡，现已确定，不能取消。</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">教练内容</label>
+                                <div class="col-sm-6">
+                                    <textarea name="" id="e" cols="30" rows="3">温馨提示：师傅您好，请您务必{0}接新学员。</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：时间</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;margin-left: 35px;">注：大括号加数字部分，如{0}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-1"></div>
+                                    <a class="btn btn-success list-btn col-sm-3">保存短信模板</a>
+                                    <a class="btn btn-success list-btn col-sm-3">发送教练短信</a>
+                                    <a class="btn btn-success list-btn col-sm-3">发送学员短信</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--非计时班短信发送 结束-->
+                    <!--末约考试提醒 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 myks-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">未约考试提醒</a>
+                            <a href="" class="panel-close myks-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">考试科目</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">手续合格未约科目一考试</option>
+                                        <option value="C3">科目三合格未约科目四</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">上课日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">班型</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">平日班</option>
+                                        <option value="C2">周末班</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" id="w" cols="30" rows="5">{0}学员您好，公交驾校提醒您，请登陆驾校官网www.gjjx.com.cn预约考试</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <label class="control-label col-sm-2" style="color:red">{0}学员姓名</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4"></div>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">查看人数</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--末约考试提醒 结束-->
+                    <!--考试合格短息通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 kshg-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">考试成绩合格通知</a>
+                            <a href="" class="panel-close kshg-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">考试科目</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">科目一</option>
+                                        <option value="C1">科目二</option>
+                                        <option value="C1">科目三</option>
+                                        <option value="C1">科目四</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">考试日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">时段</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送范围</label>
+                                <div class="ck-box col-sm-8">
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="ck" checked>
+                                        <label for="ck">窗口</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="cmp" checked>
+                                        <label for="cmp">触摸屏</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="dh" checked>
+                                        <label for="dh">电话</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="wl" checked>
+                                        <label for="wl">网络</label>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">学员内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" id="f" cols="30" rows="5">{0}学员您好，你于{1}参加的科目一考试成绩合格，请与三年内考完驾照，否则成绩作废</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：学员姓名；{1}：考试日期</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;">注：大括号加数字部分，如{0}，{1}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--考试合格短息通知 结束-->
+                    <!--即将到期学员短信通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 jjdq-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">即将到期学员短信通知</a>
+                            <a href="" class="panel-close jjdq-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="xp">
+                                        <label for="xp">科目三已考</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">到期日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="col-sm-1" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" cols="30" rows="5">学员{0}您好，您于{1}科目一考试合格，从科目一考试合格开始计时，有效期三年，目前剩{2}天，请您务必安排时间学车，否则作废。</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：学员姓名；{1}：领技能证日期；{2}：剩余天数</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;margin-left: 35px;">注：大括号加数字部分，如{0}，{1}，{2}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--即将到期学员短信通知 结束-->
+                    <!--考试未参加和不通过通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 btgtz-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">考试未参加和不通过通知</a>
+                            <a href="" class="panel-close btgtz-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">驾校</label>
+                                    <div class="col-sm-8">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1">驾校一</option>
+                                            <option value="C1">驾校二</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">通知方式</label>
+                                    <div class="col-sm-8">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1">考试未参加</option>
+                                            <option value="C1">考试未通过</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">考试科目</label>
+                                    <div class="col-sm-8">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1">科目一</option>
+                                            <option value="C1">科目二</option>
+                                            <option value="C1">科目三</option>
+                                            <option value="C1">科目四</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">
+                                    共0人
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">到期日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin: 0 20px;">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" cols="30" rows="5">{0}学员您好，由于您在{1}的科目一考试未参加，请登陆公交驾校官网www.gjjx.com.cn或拨打客服部电话60265577预约下次科目一考试</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：学员姓名；{1}：考试日期</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;margin-left: 35px;">注：大括号加数字部分，如{0}，{1}，为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--考试未参加和不通过通知 结束-->
+                    <!--考前辅导短信通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 kqfd-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">安全文明考前短信通知</a>
+                            <a href="" class="panel-close kqfd-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">驾校</label>
+                                    <div class="col-sm-8">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1">驾校一</option>
+                                            <option value="C1">驾校二</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">考试科目</label>
+                                    <div class="col-sm-8">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1">科目四</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">
+                                    共0人
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">考试日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin: 0 20px;">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label class="control-label col-sm-4">时段</label>
+                                    <div class="col-sm-8">
+                                        <select class="select-box">
+                                            <option value="C1">--请选择--</option>
+                                            <option value="C1"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" cols="30" rows="5">{0}学员您好，请您于{1}7点到公交驾校{3}参加科目三理论考前培训，{2}准备点名考试。请您携带身份证、学员卡、一张一寸白底彩照和拉练卡，增驾学员请携带驾驶证原件。受到短信请回复姓名。</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：学员姓名；{1}：考试日期；{2}：考试时间；{3}：考试地点</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;margin-left: 35px;">注：大括号加数字部分，如{0}，{1}，{2}，{3}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--考前辅导短信通知 结束-->
+                    <!--考试短信通知 开始-->
+                    <div class="panel panel-default panel-box2 col-sm-6 ksdx-hide hide-box4">
+                        <div class="panel-heading">
+                            <a class="panel-title title-head" style="float: left;">考试通知</a>
+                            <a href="" class="panel-close ksdx-close" style="float: right">×</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">驾校</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">驾校一</option>
+                                        <option value="C1">驾校二</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">考试科目</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1">科目一</option>
+                                        <option value="C1">科目二</option>
+                                        <option value="C1">科目三</option>
+                                        <option value="C1">科目四</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2" style="color:red;font-size: 20px;">共0人</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">考试日期</label>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div style="float: left;margin:0 20px">至</div>
+                                <div class="col-sm-4">
+                                    <form action="" class="form-horizontal" role="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                            </div>
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">时段</label>
+                                <div class="col-sm-4">
+                                    <select class="select-box">
+                                        <option value="C1">--请选择--</option>
+                                        <option value="C1"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">发送范围</label>
+                                <div class="ck-box col-sm-8">
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="all">
+                                        <label for="all">全选</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="ck1">
+                                        <label for="ck1">窗口</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="cmp1">
+                                        <label for="cmp1">触摸屏</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="dh1">
+                                        <label for="dh1">电话</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="wl1">
+                                        <label for="wl1">网络</label>
+                                    </div>
+                                    <div class="ckbox ckbox-success ck-box-list">
+                                        <input type="checkbox" id="bfs" checked>
+                                        <label for="bfs">已回复不发送</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">学员内容</label>
+                                <div class="col-sm-8">
+                                    <textarea name="" cols="30" rows="5">{0}学员您好，请您于{1}{2}，携带身份证原件、学生卡到C座一层大厅录入指纹，在{3}等待科目一考试点名，请准时参加。{4}收到请回复姓名</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red">{0}：学员姓名；{1}：考试日期；{2}：考试时间；{3}：考试地点；{4}:系统内置</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <label class="control-label" style="color:red;">注：大括号加数字部分，如{0}，{1}为系统内置符号；不能修改，其余部分可根据需要进行修改；</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                                <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--考试短信通知 结束-->
+                </div>
+            </div>
+            <!--学员报名 结束-->
+            <!--主页面 结束-->
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function(){
+        var cw=$(window).width();
+        var ch=$(window).height();
+        var iw=$('.ysdx-hide').width();
+        var ih=$('.ysdx-hide').height();
+        var il=(cw-iw)/2;
+        var it=(ch-ih)/2;
+        $('.ysdx-show').click(function () {
+            $('.hide-box4').hide();
+            $('.ysdx-hide').show().css({position:'fixed',top:it+'px',left:il+'px',zIndex:100});
+            var ysdxhide=$('.ysdx-hide')[0];
+            new drag(ysdxhide,{animate:false,sideObj:document});
+        })
+        $('.ysdx-close').click(function () {
+            $('.ysdx-hide').hide();
+        })
+        //******************************************************
+        var iw1=$('.kesc-hide').width();
+        var ih1=$('.kesc-hide').height();
+        var il1=(cw-iw1)/2;
+        var it1=(ch-ih1)/2;
+        $('.kesc-show').click(function () {
+            $('.hide-box4').hide();
+            $('.kesc-hide').show().css({position:'fixed',top:it1+'px',left:il1+'px',zIndex:100});
+            var keschide=$('.kesc-hide')[0];
+            new drag(keschide,{animate:false,sideObj:document});
+        })
+        $('.kesc-close').click(function () {
+            $('.kesc-hide').hide();
+        })
+        //******************************************************
+        var iw2=$('.jxdx-hide').width();
+        var ih2=$('.jxdx-hide').height();
+        var il2=(cw-iw2)/2;
+        var it2=(ch-ih2)/2;
+        $('.jxdx-show').click(function () {
+            $('.hide-box4').hide();
+            $('.jxdx-hide').show().css({position:'fixed',top:it2+'px',left:il2+'px',zIndex:100});
+            var jxdxhide=$('.jxdx-hide')[0];
+            new drag(jxdxhide,{animate:false,sideObj:document});
+        })
+        $('.jxdx-close').click(function () {
+            $('.jxdx-hide').hide();
+        })
+        //******************************************************
+        var iw3=$('.zhdx-hide').width();
+        var ih3=$('.zhdx-hide').height();
+        var il3=(cw-iw3)/2;
+        var it3=(ch-ih3)/2;
+        $('.zhdx-show').click(function () {
+            $('.hide-box4').hide();
+            $('.zhdx-hide').show().css({position:'fixed',top:it3+'px',left:il3+'px',zIndex:100});
+            var zhdxhide=$('.zhdx-hide')[0];
+            new drag(zhdxhide,{animate:false,sideObj:document});
+        })
+        $('.zhdx-close').click(function () {
+            $('.zhdx-hide').hide();
+        })
+        //******************************************************
+        var iw4=$('.fjsb-hide').width();
+        var ih4=$('.fjsb-hide').height();
+        var il4=(cw-iw4)/2;
+        var it4=(ch-ih4)/2;
+        $('.fjsb-show').click(function () {
+            $('.hide-box4').hide();
+            $('.fjsb-hide').show().css({position:'fixed',top:it4+'px',left:il4+'px',zIndex:100});
+            var fjsbhide=$('.fjsb-hide')[0];
+            new drag(fjsbhide,{animate:false,sideObj:document});
+        })
+        $('.fjsb-close').click(function () {
+            $('.fjsb-hide').hide();
+        })
+        //******************************************************
+        var iw5=$('.myks-hide').width();
+        var ih5=$('.myks-hide').height();
+        var il5=(cw-iw5)/2;
+        var it5=(ch-ih5)/2;
+        $('.myks-show').click(function () {
+            $('.hide-box4').hide();
+            $('.myks-hide').show().css({position:'fixed',top:it5+'px',left:il5+'px',zIndex:100});
+            var mykshide=$('.myks-hide')[0];
+            new drag(mykshide,{animate:false,sideObj:document});
+        })
+        $('.myks-close').click(function () {
+            $('.myks-hide').hide();
+        })
+        //******************************************************
+        var iw6=$('.kshg-hide').width();
+        var ih6=$('.kshg-hide').height();
+        var il6=(cw-iw6)/2;
+        var it6=(ch-ih6)/2;
+        $('.kshg-show').click(function () {
+            $('.hide-box4').hide();
+            $('.kshg-hide').show().css({position:'fixed',top:it6+'px',left:il6+'px',zIndex:100});
+            var kshghide=$('.kshg-hide')[0];
+            new drag(kshghide,{animate:false,sideObj:document});
+        })
+        $('.kshg-close').click(function () {
+            $('.kshg-hide').hide();
+        })
+        //******************************************************
+        var iw7=$('.skdx-hide').width();
+        var ih7=$('.skdx-hide').height();
+        var il7=(cw-iw7)/2;
+        var it7=(ch-ih7)/2;
+        $('.skdx-show').click(function () {
+            $('.hide-box4').hide();
+            $('.skdx-hide').show().css({position:'fixed',top:it7+'px',left:il7+'px',zIndex:100});
+            var skdxhide=$('.skdx-hide')[0];
+            new drag(skdxhide,{animate:false,sideObj:document});
+        })
+        $('.skdx-close').click(function () {
+            $('.skdx-hide').hide();
+        })
+        //******************************************************
+        var iw8=$('.jjdq-hide').width();
+        var ih8=$('.jjdq-hide').height();
+        var il8=(cw-iw8)/2;
+        var it8=(ch-ih8)/2;
+        $('.jjdq-show').click(function () {
+            $('.hide-box4').hide();
+            $('.jjdq-hide').show().css({position:'fixed',top:it8+'px',left:il8+'px',zIndex:100});
+            var jjdqhide=$('.jjdq-hide')[0];
+            new drag(jjdqhide,{animate:false,sideObj:document});
+        })
+        $('.jjdq-close').click(function () {
+            $('.jjdq-hide').hide();
+        })
+        //******************************************************
+        var iw9=$('.btgtz-hide').width();
+        var ih9=$('.btgtz-hide').height();
+        var il9=(cw-iw9)/2;
+        var it9=(ch-ih9)/2;
+        $('.btgtz-show').click(function () {
+            $('.hide-box4').hide();
+            $('.btgtz-hide').show().css({position:'fixed',top:it9+'px',left:il9+'px',zIndex:100});
+            var btgtzhide=$('.btgtz-hide')[0];
+            new drag(btgtzhide,{animate:false,sideObj:document});
+        })
+        $('.btgtz-close').click(function () {
+            $('.btgtz-hide').hide();
+        })
+        //******************************************************
+        var iw10=$('.kqfd-hide').width();
+        var ih10=$('.kqfd-hide').height();
+        var il10=(cw-iw10)/2;
+        var it10=(ch-ih10)/2;
+        $('.kqfd-show').click(function () {
+            $('.hide-box4').hide();
+            $('.kqfd-hide').show().css({position:'fixed',top:it10+'px',left:il10+'px',zIndex:100});
+            var kqfdhide=$('.kqfd-hide')[0];
+            new drag(kqfdhide,{animate:false,sideObj:document});
+        })
+        $('.kqfd-close').click(function () {
+            $('.kqfd-hide').hide();
+        })
+        //******************************************************
+        var iw11=$('.ksdx-hide').width();
+        var ih11=$('.ksdx-hide').height();
+        var il11=(cw-iw11)/2;
+        var it11=(ch-ih11)/2;
+        $('.ksdx-show').click(function () {
+            $('.hide-box4').hide();
+            $('.ksdx-hide').show().css({position:'fixed',top:it11+'px',left:il11+'px',zIndex:100});
+            var ksdxhide=$('.ksdx-hide')[0];
+            new drag(ksdxhide,{animate:false,sideObj:document});
+        })
+        $('.ksdx-close').click(function () {
+            $('.ksdx-hide').hide();
+        })
+    })
+</script>
+</body>
+</html>

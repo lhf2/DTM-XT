@@ -1,0 +1,114 @@
+html,body,ul,li,p{margin:0;padding:0}
+ul,li{list-style: none;}
+.title_jx {
+    width: 970px;
+    margin: 15px auto;
+}
+.title_jx ul.step1 {
+    background: url(../images/step001.png) no-repeat left center;
+    width: 420px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    float: right;
+    margin-top: 7px;
+}
+.title_jx ul li {
+    float: left;
+    text-align: center;
+    width: 140px;
+    color: #FFFFFF;
+}
+.title_jx ul li.color1 {
+    color: #979797;
+}
+.clear {
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    clear: both;
+    width: 100%;
+}
+.welcome {
+    border: solid 1px #ffbf7a;
+    text-align: center;
+    color: #ff6c00;
+    background: #fff9c7;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 30px 0;
+    line-height: 35px;
+}
+.title_jx .from {
+    width: 600px;
+    margin: 0 auto;
+    font-family: 'Microsoft yahei';
+    color: #4f4f4f;
+    font-size: 14px;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-color: gray;
+}
+.title_jx .from table tr td {
+    white-space: nowrap;
+}
+.title_jx .from .red {
+    color: #F00;
+    padding-top: 3px;
+}
+.title_jx .from .input_field {
+    width: 242px;
+    padding: 5px;
+    border: solid 1px #bbbbbb;
+}
+.title_jx .from .field,.field1{
+    width: 230px;
+    padding: 6px 5px 7px 5px;
+    border: solid 1px #bbbbbb;
+}
+.title_jx .from .input_field1 {
+    padding: 4px 5px;
+    border: solid 1px #bbbbbb;
+    margin-right: 5px;
+}
+#infointro_type, #infointro_bmcenter {
+    padding: 7px 5px;
+    border: solid 1px #bbbbbb;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.title_jx .from .text {
+    padding: 5px;
+    border: solid 1px #bbbbbb;
+    width: 360px;
+    height: 65px;
+}
+.title_jx .from .btn {
+    width: 86px;
+    height: 34px;
+    border: none;
+}
+.title_jx .from .btn001 {
+    background: url(../images/btn005.png) no-repeat;
+}
+.title_jx .from .btn002 {
+    background: url(../images/btn006.png) no-repeat;
+    margin-left: 15px;
+}
+.title_jx .from img {
+    vertical-align: middle;
+}
+.zjnumerror, .error_name, .passworderror {
+    background: #ffebeb;
+    line-height: 28px;
+    height: 28px;
+    padding: 0 10px;
+    margin: 0 10px;
+    border: solid 1px #ffbdbe;
+    display: inline-block;
+    font-size: 12px;
+    color: #ff0000;
+}

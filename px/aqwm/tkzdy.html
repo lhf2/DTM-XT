@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="shortcut icon" href="images/favicon.png" type="image/png">-->
+    <title>DTM驾校管理系统</title>
+    <link href="../../css/style.default.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap-datetimepicker.min.css"/>
+    <script src="../../js/html5shiv.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <script src="../../js/jquery-1.11.2.js"></script>
+    <script src="../../js/index.js"></script>
+    <script src="../../js/drag.js"></script>
+    <script src="../../js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../js/jquery-ui-1.10.3.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/modernizr.min.js"></script>
+    <script src="../../js/jquery.sparkline.min.js"></script>
+    <script src="../../js/toggles.min.js"></script>
+    <script src="../../js/retina.min.js"></script>
+    <script src="../../js/jquery.cookies.js"></script>
+    <script src="../../js/flot/jquery.flot.min.js"></script>
+    <script src="../../js/flot/jquery.flot.resize.min.js"></script>
+    <script src="../../js/flot/jquery.flot.spline.min.js"></script>
+    <script src="../../js/morris.min.js"></script>
+    <script src="../../js/raphael-2.1.0.min.js"></script>
+    <script src="../../js/custom.js"></script>
+    <script src="../../js/bootstrap-datetimepicker.js"></script>
+    <script src="../../js/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+<div id="preloader" style="display: none;">
+    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+<section>
+    <!--左侧导航 开始-->
+    <div class="leftpanel">
+        <div class="logopanel">
+            <img src="../../images/u21.png" width="240" height="50" alt=""/>
+        </div><!-- logopanel -->
+        <div class="leftpanelinner">
+            <!-- This is only visible to small devices -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media userlogged">
+                    <img alt="" src="images/photos/loggeduser.png" class="media-object">
+                    <div class="media-body">
+                        <h4>John Doe</h4>
+                        <span>"Life is so..."</span>
+                    </div>
+                </div>
+                <h5 class="sidebartitle actitle">Account</h5>
+                <ul class="nav nav-pills nav-stacked nav-bracket mb30">
+                    <li><a href="profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                    <li><a href=""><i class="fa fa-cog"></i> <span>Account Settings</span></a></li>
+                    <li><a href=""><i class="fa fa-question-circle"></i> <span>Help</span></a></li>
+                    <li><a href="signout.html"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+            <h5 class="sidebartitle"></h5>
+            <ul class="nav nav-pills nav-stacked nav-bracket">
+                <li class="active nav-parent bmgj-iconshow" style="display: none"><a href="index.html"><i class="fa fa-home"></i> <span>报名管理</span></a>
+                    <ul class="children">
+                        <li><a href="../../bmgl/wsbm.html"><i class="fa fa-caret-right"></i>网上报名</a></li>
+                        <li><a href="../../bmgl/jybm.html"><i class="fa fa-caret-right"></i>简易报名</a></li>
+                        <li><a href="../../bmgl/xybm.html"><i class="fa fa-caret-right"></i>学员报名</a></li>
+                        <li><a href="../../bmgl/dbzz.html"><i class="fa fa-caret-right"></i>代办暂住证</a></li>
+                        <li><a href="../../bmgl/zjjs.html"><i class="fa fa-caret-right"></i>证件接收</a></li>
+                        <li><a href="../../bmgl/fpjs.html"><i class="fa fa-caret-right"></i>发票接收</a></li>
+                        <li><a href="../../bmgl/zjlq.html"><i class="fa fa-caret-right"></i>证件领取</a></li>
+                        <li><a href="../../bmgl/dayj.html"><i class="fa fa-caret-right"></i>档案移交</a></li>
+                        <li><a href="../../bmgl/ylsc.html"><i class="fa fa-caret-right"></i>档案提交上传车管所</a></li>
+                        <li><a href="../../bmgl/xytx.html"><i class="fa fa-caret-right"></i>学员退学</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent xygl-iconshow" style="display: none"><a href="email.html"><i class="fa fa-envelope-o"></i> <span>学员管理</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../../xygl/xygl.html"><i class="fa fa-caret-right"></i>学员信息查询</a></li>
+                        <li><a href="../../xygl/xyzh.html"><i class="fa fa-caret-right"></i>学员综合信息</a></li>
+                        <li><a href="../../xygl/jskgl.html"><i class="fa fa-caret-right"></i>计时卡管理</a></li>
+                        <li><a href="../../xygl/blscsx.html"><i class="fa fa-caret-right"></i>办理上车手续</a></li>
+                        <li><a href="../../xygl/xybg.html"><i class="fa fa-caret-right"></i>学员变更</a></li>
+                        <li><a href="../../xygl/xybgjl.html"><i class="fa fa-caret-right"></i>学员变更记录</a></li>
+                        <li><a href="../../xygl/scdy.html"><i class="fa fa-caret-right"></i>手册打印</a></li>
+                        <li><a href="../../xygl/bgdc.html"><i class="fa fa-caret-right"></i>表格导出</a></li>
+                        <li><a href="../../xygl/dxfs.html"><i class="fa fa-caret-right"></i>短信发送</a></li>
+                        <li><a href="../../xygl/xyzhtj.html"><i class="fa fa-caret-right"></i>学员综合统计</a></li>
+                        <li><a href="../../xygl/jszgl.html"><i class="fa fa-caret-right"></i>驾驶证管理</a></li>
+                        <li><a href="../../xygl/jxbg.html"><i class="fa fa-caret-right"></i>驾校变更</a></li>
+                        <li><a href="../../xygl/xypj.html"><i class="fa fa-caret-right"></i>学员评价</a></li>
+                        <li><a href="../../xygl/jnzgq.html"><i class="fa fa-caret-right"></i>技能证过期</a></li>
+                    </ul>
+                </li>
+                <li class="active nav-active nav-parent px-iconshow" style="display: none;"><a href=""><i class="fa fa-edit"></i> <span>法培培训</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../../px/fppx/fpdsz.html"><i class="fa fa-caret-right"></i>法培点设置</a></li>
+                        <li><a href="../../px/fppx/fpqs.html"><i class="fa fa-caret-right"></i>法培期数</a></li>
+                        <li><a href="../../px/fppx/fpzdy.html"><i class="fa fa-caret-right"></i>法培证打印</a></li>
+                        <li><a href="../../px/fppx/fpkqmx.html"><i class="fa fa-caret-right"></i>法培考勤明细</a></li>
+                        <li><a href="../../px/fppx/fpbktk.html"><i class="fa fa-caret-right"></i>法培补课调课</a></li>
+                        <li><a href="../../px/fppx/skxytj.html"><i class="fa fa-caret-right"></i>上课学员统计</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent px-iconshow active nav-active" style="display: none"><a href=""><i class="fa fa-suitcase"></i> <span>科目二、三培训</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../../px/kmespx/jlcpbgz.html"><i class="fa fa-caret-right"></i>教练车排班规则</a></li>
+                        <li><a href="../../px/kmespx/jlypb.html"><i class="fa fa-caret-right"></i>教练员排班</a></li>
+                        <li><a href="../../px/kmespx/jlcfl.html"><i class="fa fa-caret-right"></i>教练车放量</a></li>
+                        <li><a href="../../px/kmespx/jlcflxg.html"><i class="fa fa-caret-right"></i>教练车放量修改</a></li>
+                        <li><a href="../../px/kmespx/xlyy.html"><i class="fa fa-caret-right"></i>训练预约</a></li>
+                        <li><a href="../../px/kmespx/yycx.html"><i class="fa fa-caret-right"></i>预约查询</a></li>
+                        <li><a href="../../px/kmespx/jlcyycx.html"><i class="fa fa-caret-right"></i>教练车预约查询</a></li>
+                        <li><a href="../../px/kmespx/mnxl.html"><i class="fa fa-caret-right"></i>模拟训练</a></li>
+                        <li><a href="../../px/kmespx/xlksgz.html"><i class="fa fa-caret-right"></i>训练课时更正</a></li>
+                        <li><a href="../../px/kmespx/kscl.html"><i class="fa fa-caret-right"></i>课时处理</a></li>
+                        <li><a href="../../px/kmespx/dyyyd.html"><i class="fa fa-caret-right"></i>打印预约单</a></li>
+                        <li><a href="../../px/kmespx/jlyksgl.html"><i class="fa fa-caret-right"></i>教练员课时管理</a></li>
+                        <li><a href="../../px/kmespx/fjsbxl.html"><i class="fa fa-caret-right"></i>非计时班预约</a></li>
+                        <li><a href="../../px/kmespx/jxfl.html"><i class="fa fa-caret-right"></i>集训放量</a></li>
+                        <li><a href="../../px/kmespx/jxflcx.html"><i class="fa fa-caret-right"></i>集训放量查询</a></li>
+                        <li><a href="../../px/kmespx/jxyy.html"><i class="fa fa-caret-right"></i>集训预约</a></li>
+                        <li><a href="../../px/kmespx/bxfl.html"><i class="fa fa-caret-right"></i>补训放量</a></li>
+                        <li><a href="../../px/kmespx/bxyy.html"><i class="fa fa-caret-right"></i>补训预约</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent px-iconshow active nav-active"><a href=""><i class="fa fa-bug"></i> <span>安全文明</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../../px/aqwm/aqwm.html"><i class="fa fa-caret-right"></i>安全文明点设置</a></li>
+                        <li><a href="../../px/aqwm/aqqs.html"><i class="fa fa-caret-right"></i>安全期数管理</a></li>
+                        <li class="active"><a href="../../px/aqwm/tkzdy.html"><i class="fa fa-caret-right"></i>听课证打印</a></li>
+                        <li><a href="../../px/aqwm/xybk.html"><i class="fa fa-caret-right"></i>学员补课</a></li>
+                        <li><a href="../../px/aqwm/aqwmkq.html"><i class="fa fa-caret-right"></i>安全考勤明细</a></li>
+                        <li><a href="../../px/aqwm/skxytj1.html"><i class="fa fa-caret-right"></i>上课学员统计</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent ks-iconshow" style="display: none;"><a href=""><i class="fa fa-edit"></i> <span>科一考试</span></a>
+                    <ul class="children">
+                        <li><a href="../../ks/kyks/fpksfl.html"><i class="fa fa-caret-right"></i>法培考试放量</a></li>
+                        <li><a href="../../ks/kyks/fpksyy.html"><i class="fa fa-caret-right"></i>法培考试预约</a></li>
+                        <li><a href="../../ks/kyks/fpkscj.html"><i class="fa fa-caret-right"></i>法培考试成绩</a></li>
+                        <li><a href="../../ks/kyks/bksxy.html"><i class="fa fa-caret-right"></i>法培不考试学员</a></li>
+                        <li><a href="../../ks/kyks/jgltj.html"><i class="fa fa-caret-right"></i>法培及格率统计</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent ks-iconshow" style="display: none;"><a href="tables.html"><i class="fa fa-th-list"></i> <span>科目二三考试</span></a>
+                    <ul class="children">
+                        <li><a href="../../ks/kmesks/kqcs.html"><i class="fa fa-caret-right"></i>考前测试</a></li>
+                        <li><a href="../../ks/kmesks/ksfl.html"><i class="fa fa-caret-right"></i>考试放量</a></li>
+                        <li><a href="../../ks/kmesks/keksyy.html"><i class="fa fa-caret-right"></i>科目二考试预约</a></li>
+                        <li><a href="../../ks/kmesks/kmecj.html"><i class="fa fa-caret-right"></i>科目二成绩</a></li>
+                        <li><a href="../../ks/kmesks/kmsyy.html"><i class="fa fa-caret-right"></i>科目三预约</a></li>
+                        <li><a href="../../ks/kmesks/kmscj.html"><i class="fa fa-caret-right"></i>科目三成绩</a></li>
+                        <li><a href="../../ks/kmesks/kshz.html"><i class="fa fa-caret-right"></i>考试汇总</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent ks-iconshow active nav-active" style="display: none"><a href=""><i class="fa fa-bug"></i> <span>安全文明</span></a>
+                    <ul class="children" style="display: block">
+                        <li><a href="../../ks/aqwm/aqksfl.html"><i class="fa fa-caret-right"></i>安全考试放量</a></li>
+                        <li><a href="../../ks/aqwm/aqksyy.html"><i class="fa fa-caret-right"></i>安全考试预约</a></li>
+                        <li><a href="../../ks/aqwm/aqkscj.html"><i class="fa fa-caret-right"></i>安全考试成绩</a></li>
+                        <li><a href="../../ks/aqwm/aqksjgltj.html"><i class="fa fa-caret-right"></i>安全考试及格率统计</a></li>
+                        <li><a href="../../ks/aqwm/aqbksxy.html"><i class="fa fa-caret-right"></i>安全不考试学员</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent cwgl-iconshow" style="display: none"><a href="maps.html"><i class="fa fa-map-marker"></i> <span>财务管理</span></a>
+                    <ul class="children">
+                        <li><a href="../../cwgl/gmks.html"><i class="fa fa-caret-right"></i>购买课时</a></li>
+                        <li><a href="../../cwgl/kszccf.html"><i class="fa fa-caret-right"></i>考试租车收费</a></li>
+                        <li><a href="../../cwgl/gzltj.html"><i class="fa fa-caret-right"></i>工作量统计</a></li>
+                        <li><a href="../../cwgl/zhsf.html"><i class="fa fa-caret-right"></i>综合收费</a></li>
+                        <li><a href="../../cwgl/jzrqsz.html"><i class="fa fa-caret-right"></i>结账日期设置</a></li>
+                        <li><a href="../../cwgl/zsjzhz.html"><i class="fa fa-caret-right"></i>招生结账汇总</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent jcxx-iconshow" style="display: none"><a href=""><i class="fa fa-file-text"></i> <span>基础信息</span></a>
+                    <ul class="children">
+                        <li><a href="../../jcxx/xyxxdr.html"><i class="fa fa-caret-right"></i>学员信息导入</a></li>                         <li><a href="../../jcxx/bmdsz.html"><i class="fa fa-caret-right"></i>报名点设置</a></li>
+                        <li><a href="../../jcxx/bzgl.html"><i class="fa fa-caret-right"></i>班型管理</a></li>
+                        <li><a href="../../jcxx/bmtcgz.html"><i class="fa fa-caret-right"></i>报名提成规则</a></li>
+                        <li><a href="../../jcxx/sdgl.html"><i class="fa fa-caret-right"></i>时段管理</a></li>
+                        <li><a href="../../jcxx/cxgl.html"><i class="fa fa-caret-right"></i>车型管理</a></li>
+                        <li><a href="../../jcxx/pxbz.html"><i class="fa fa-caret-right"></i>培训班型</a></li>
+                        <li><a href="../../jcxx/jlcda.html"><i class="fa fa-caret-right"></i>教练车档案</a></li>
+                        <li><a href="../../jcxx/jlyda.html"><i class="fa fa-caret-right"></i>教练员档案</a></li>
+                        <li><a href="../../jcxx/dkhgl.html"><i class="fa fa-caret-right"></i>大客户管理</a></li>
+                        <li><a href="../../jcxx/dadgl.html"><i class="fa fa-caret-right"></i>档案袋管理</a></li>
+                        <li><a href="../../jcxx/jmb.html"><i class="fa fa-caret-right"></i>价目表</a></li>
+                        <li><a href="../../jcxx/yhhdgl.html"><i class="fa fa-caret-right"></i>优惠活动管理</a></li>
+                        <li><a href="../../jcxx/csgl.html"><i class="fa fa-caret-right"></i>参数管理</a></li>
+                        <li><a href="../../jcxx/bmgl.html"><i class="fa fa-caret-right"></i>部门管理</a></li>
+                        <li><a href="../../jcxx/gzllx.html"><i class="fa fa-caret-right"></i>工作量类型</a></li>
+                        <li><a href="../../jcxx/lrdgl.html"><i class="fa fa-caret-right"></i>录入点管理</a></li>
+                        <li><a href="../../jcxx/yggl.html"><i class="fa fa-caret-right"></i>员工管理</a></li>
+                        <li><a href="../../jcxx/txgl.html"><i class="fa fa-caret-right"></i>退学管理</a></li>
+                        <li><a href="../../jcxx/zwgl.html"><i class="fa fa-caret-right"></i>职位管理</a></li>
+                        <li><a href="../../jcxx/jlcz.html"><i class="fa fa-caret-right"></i>教练车组</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent grzx-iconshow" style="display: none"><a href="layouts.html"><i class="fa fa-laptop"></i> <span>个人中心</span></a>
+                    <ul class="children">
+                        <li><a href="../../gezx/xgmm.html"><i class="fa fa-caret-right"></i>修改密码</a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent xtgl-iconshow" style="display: none"><a href="layouts.html"><i class="fa fa-laptop"></i> <span>系统管理</span></a>
+                    <ul class="children">
+                        <li><a href="../../xtgl/qxgl.html"><i class="fa fa-caret-right"></i>权限管理</a></li>
+                        <li><a href="../../xtgl/xtrz.html"><i class="fa fa-caret-right"></i>系统日志</a></li>
+                        <li><a href="../../xtgl/zhgl.html"><i class="fa fa-caret-right"></i>账号管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- leftpanelinner -->
+    </div>
+    <!-- 左侧导航 结束 -->
+    <div class="mainpanel">
+        <div class="headerbar">
+            <ul>
+                <li>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon bmgl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">报名管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon
+                xygl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">学员管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon px-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">培训</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon ks-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">考试</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon cwgl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">财务管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon jcxx-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">基础信息</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon grzx-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">个人中心</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon xtgl-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">系统管理</div>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle tp-icon tcxt-icon" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <div class="nav-text">退出系统</div>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="pageheader">
+            <h2>听课证</h2>
+        </div>
+        <!--主页面 开始-->
+        <div class="contentpanel">
+            <!--查询条件 开始-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">查询条件</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <label class="control-label col-sm-4">驾校</label>
+                            <div class="col-sm-8">
+                                <select class="select-box">
+                                    <option value="C1">--请选择--</option>
+                                    <option value="C1">驾校一</option>
+                                    <option value="C1">驾校二</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="control-label col-sm-4">姓名</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" maxlength="8">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="control-label col-sm-4">校编号</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" maxlength="11">
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <label class="control-label col-sm-2" style="width: 90px;">身份证号</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" maxlength="18">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <label class="control-label col-sm-4">时段</label>
+                            <div class="col-sm-8">
+                                <select class="select-box">
+                                    <option value="C1">--请选择--</option>
+                                    <option value="C1">上午</option>
+                                    <option value="C1">下午</option>
+                                    <option value="C1">晚上</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="control-label col-sm-4">教室</label>
+                            <div class="col-sm-8">
+                                <select class="select-box" style="width: 100%;height: 27px;">
+                                    <option value="C1">--请选择--</option>
+                                    <option value="C1">教室一</option>
+                                    <option value="C1">教室二</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="control-label col-sm-4">学习证号</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">开课日期</label>
+                            <div class="col-sm-4">
+                                <form action="" class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" readonly="">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                            <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div style="float: left;margin:0 20px">至</div>
+                            <div class="col-sm-4">
+                                <form action="" class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" readonly="">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                            <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <a class="btn btn-success chaxun-btn col-sm-3">查询</a>
+                            <a class="btn btn-success chaxun-btn col-sm-3" style="margin-left: 20px">导出Excel</a>
+                        </div>
+                    </div>
+                </div><!-- panel-body -->
+            </div>
+            <!--查询条件 结束-->
+            <!--学员报名 开始-->
+            <div class="panel panel-default panel-box">
+                <div class="panel-heading">
+                    <div class="panel-heading">
+                        <a class="panel-title title-head color-ling dy-show1">创建打印听课证</a>
+                        <a class="panel-title title-head color-ling">删除选中听课证</a>
+                        <a class="panel-title title-head color-ling pl-show">批量创建听课证记录</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-success mb30">
+                        <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="check-icon">
+                            </th>
+                            <th>驾校</th>
+                            <th>听课证编号</th>
+                            <th>身份证号</th>
+                            <th>学员姓名</th>
+                            <th>性别</th>
+                            <th>教室</th>
+                            <th>座位号</th>
+                            <th>上课日期</th>
+                            <th>学员电话</th>
+                            <th>是否晚班</th>
+                            <th>短信</th>
+                            <th>时段</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="check-xz">
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <span class="fa fa-edit" style="margin-right: 5px;"></span>
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-group">
+                        <div class="col-sm-3"></div>
+                        <ul class="pagination" style="float: left;">
+                            <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                        <div class="col-sm-1">
+                            <div class="col-sm-5" style="line-height: 27px;text-align: center">
+                                跳转到
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="text" class="col-sm-9">
+                            </div>
+                            <div class="col-sm-2" style="line-height: 27px">
+                                页
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-success chaxun-btn col-sm-4">跳转</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--学员报名 结束-->
+            <!--法培证创建打印 开始-->
+            <!--打印 开始-->
+            <div class="panel panel-default panel-box1 dy-hide1 hide1-box col-sm-8">
+                <div class="panel-heading">
+                    <div class="panel-heading">
+                        <a class="panel-title">听课证打印</a>
+                        <a class="panel-close dy-close1">×</a>
+                    </div>
+                </div>
+                <div class="panel-body" style="padding: 15px;">
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">听课证</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">期数</label>
+                            <div class="col-sm-8">
+                                <select class="select-box">
+                                    <option value="C1">--请选择--</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">上课日期</label>
+                            <div class="col-sm-8">
+                                <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" readonly="">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 scdy-hide" style="color: red;font-size: 24px">
+                            已打印
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">上课教室</label>
+                            <div class="col-sm-8">
+                                <select class="select-box" style="width: 100%;height: 27px;">
+                                    <option value="C1">--请选择--</option>
+                                    <option value="C1">教室一</option>
+                                    <option value="C1">教室二</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ckbox ckbox-success ck-box-list" style="margin-left: 17px;">
+                                <input type="checkbox" id="dy">
+                                <label for="dy">设置打印格式</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">座位编号</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ckbox ckbox-success ck-box-list" style="margin-left: 17px;">
+                                <input type="checkbox" id="sk">
+                                <label for="sk">上课</label>
+                            </div>
+                            <div class="ckbox ckbox-success ck-box-list" style="margin-left: 17px;">
+                                <input type="checkbox" id="dy1">
+                                <label for="dy1">打印</label>
+                            </div>
+                            <div class="ckbox ckbox-success ck-box-list" style="margin-left: 17px;">
+                                <input type="checkbox" id="dx">
+                                <label for="dx">短信</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">学生姓名</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">身份证号</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="btn btn-success list-btn col-sm-4 scdy-show">生成并打印</a>
+                            <a class="btn btn-success list-btn col-sm-3 dx-show">短信</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-5"></div>
+                        <a class="btn btn-success list-btn col-sm-1 dy-close1">关闭</a>
+                    </div>
+                </div>
+            </div>
+            <!--打印 结束-->
+            <!--短信 开始-->
+            <div class="panel panel-default panel-box2 col-sm-6 dx-hide">
+                <div class="panel-heading">
+                    <a class="panel-title title-head" style="float: left;">法培上课通知</a>
+                    <a href="" class="panel-close dx-close" style="float: right">×</a>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">驾校</label>
+                        <div class="col-sm-4">
+                            <select class="select-box">
+                                <option value="C1">--请选择--</option>
+                                <option value="C1">驾校一</option>
+                                <option value="C1">驾校二</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">科目</label>
+                        <div class="col-sm-4">
+                            <select class="select-box">
+                                <option value="C1">--请选择--</option>
+                                <option value="C1">科目一</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">法培期数</label>
+                        <div class="col-sm-4">
+                            <select class="select-box">
+                                <option value="C1">--请选择--</option>
+                                <option value="C1">期数</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">共0人</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">发送内容</label>
+                        <div class="col-sm-8">
+                            <textarea name="" id="w" cols="30" rows="5">{0}学员您好，请于{1}，到校{2}教室{3}号参加法规培训，请您带收据或发票乘坐班车</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2"></div>
+                        <label class="control-label col-sm-4" style="color:red">名字符号含义表示如下：</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-8" style="color:red">{0}：学员姓名；{1}：上课日期；{2}：教室；{3}：座位号<br>大括号加数字部分，如{0}，{1}，{2}为系统内置符号；不能修改，其余部分可以根据需要进行修改</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3"></div>
+                        <a class="btn btn-success list-btn col-sm-3 btn-center">保存短信模板</a>
+                        <a class="btn btn-success list-btn col-sm-2 btn-center">发送短信</a>
+                    </div>
+                </div>
+            </div>
+            <!--短信 结束-->
+            <!--法培证创建打印 结束-->
+            <!--批量创建听课证记录 开始-->
+            <div class="panel panel-default panel-box1 pl-hide hide1-box col-sm-8">
+                <div class="panel-heading">
+                    <div class="panel-heading">
+                        <a class="panel-title">安全文明批量创建听课记录</a>
+                        <a href="" class="panel-close pl-close">×</a>
+                    </div>
+                </div>
+                <div class="panel-body" style="padding: 15px;">
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <label class="control-label col-sm-2">科二考试日期</label>
+                            <div class="col-sm-4">
+                                <form action="" class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" readonly="">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                            <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div style="float: left;margin:0 20px">至</div>
+                            <div class="col-sm-4">
+                                <form action="" class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" readonly="">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                            <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <a class="btn btn-success list-btn col-sm-1">查询</a>
+                        <div class="col-sm-2" style="color:red;font-size: 20px;">共0人</div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <label class="control-label col-sm-2">科三考试日期</label>
+                            <div class="col-sm-4">
+                                <form action="" class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" readonly="">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                            <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div style="float: left;margin:0 20px">至</div>
+                            <div class="col-sm-4">
+                                <form action="" class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="input-group date form_date col-sm-12" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" readonly="">
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                            <input type="hidden" id="dtp_input2" value="2015-08-13"><br>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-1">期数</label>
+                        <div class="col-sm-4">
+                            <select class="select-box">
+                                <option value="C1">--请选择--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">教室</label>
+                            <div class="col-sm-8">
+                                <select class="select-box" style="width: 100%;height: 27px;">
+                                    <option value="C1">--请选择--</option>
+                                    <option value="C1">教室一</option>
+                                    <option value="C1">教室二</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <label class="control-label col-sm-2">人数</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-5"></div>
+                        <a class="btn btn-success list-btn col-sm-1">打印</a>
+                        <a class="btn btn-success list-btn col-sm-1 pl-close">关闭</a>
+                    </div>
+                </div>
+            </div>
+            <!--批量创建听课证记录 结束-->
+            <!--主页面 结束-->
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        var cw=$(window).width();
+        var ch=$(window).height();
+        //打印
+        var iw2=$('.dy-hide1').width();
+        var ih2=$('.dy-hide1').height();
+        var il2=(cw-iw2)/2;
+        var it2=(ch-ih2)/2;
+        $('.dy-show1').click(function () {
+            $('.hide1-box').hide();
+            $('.dy-hide1').show().css({position:'fixed',top:it2+'px',left:il2+'px',zIndex:100});
+            var dyhide1=$('.dy-hide1')[0];
+            new drag(dyhide1,{animate:false,sideObj:document});
+        })
+        $('.dy-close1').click(function () {
+//            alert(1);
+            $('.dy-hide1').hide();
+        })
+        //短信
+        var iw3=$('.dy-hide').width();
+        var ih3=$('.dy-hide').height();
+        var il3=(cw-iw3)/2;
+        var it3=(ch-ih3)/2;
+        $('.scdy-show').click(function () {
+            $('.scdy-hide').show();
+        })
+        $('.dx-show').click(function () {
+            $('.dx-hide').show().css({position:'fixed',top:it3+'px',left:il3+'px',zIndex:100});
+            var dxhide=$('.dx-hide')[0];
+            new drag(dxhide,{animate:false,sideObj:document});
+        })
+        $('.dx-close').click(function () {
+            $('.dx-hide').hide();
+        })
+        //批量
+        var iw4=$('.pl-hide').width();
+        var ih4=$('.pl-hide').height();
+        var il4=(cw-iw4)/2;
+        var it4=(ch-ih4)/2;
+        $('.pl-show').click(function () {
+            $('.hide1-box').hide();
+            $('.pl-hide').show().css({position:'fixed',top:it4+'px',left:il4+'px',zIndex:100});
+            var plhide=$('.pl-hide')[0];
+            new drag(plhide,{animate:false,sideObj:document});
+        })
+        $('.pl-close').click(function () {
+            $('.dx-hide').hide();
+        })
+    })
+</script>
+</body>
+</html>

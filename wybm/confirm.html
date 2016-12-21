@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>核对信息</title>
+    <link rel="stylesheet" href="../css/confirm.css"/>
+    <script src="../js/jquery-1.11.2.js"></script>
+</head>
+<body>
+<div class="title_jx">
+    <ul class="step2">
+        <li>1、填写信息</li>
+        <li>2、核对订单</li>
+        <li class="color1">3、报名成功</li>
+    </ul>
+    <div class="clear"></div>
+    <div class="momey">
+        <h1 style="font-weight:bold;font-size: 24px;">报名订单提交成功，请您尽快付款！</h1>
+        <p>&nbsp;</p>
+        <p>立即支付<font>600</font>元报名费，即可完成订单。</p>
+        <p>剩余费用（学车全费减600元）按我校规定时间内补全即可。</p>
+        <p>请您在<font>24小时</font>完成支付，否则订单会被自动取消。</p>
+    </div>
+    <div class="dingdan dingdan1">
+        <div class="hdpic"></div>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" class="box3">
+            <tbody><tr>
+                <th colspan="2">报名信息</th>
+            </tr>
+            <tr>
+                <td align="right">培训班种：</td>
+                <td class="hei">C1 全周预约班</td>
+            </tr>
+            <tr>
+                <td align="right">姓名：</td>
+                <td class="hei">f</td>
+            </tr>
+            <tr>
+                <td align="right">证件类型：</td>
+                <td class="hei">身份证</td>
+            </tr>
+            <tr>
+                <td align="right">证件号码：</td>
+                <td class="hei">142223199308180935</td>
+            </tr>
+            <tr>
+                <td align="right">手机号码：</td>
+                <td class="hei">13245635577</td>
+            </tr>
+            <tr>
+                <td align="right">订单编号：</td>
+                <td class="hei">2016011400000029970</td>
+            </tr>
+            <tr>
+                <td align="right">报名费用：</td>
+                <td class="hei"><b style="font-size:14px;color:red;">600</b>元</td>
+            </tr>
+            <tr>
+                <td align="right">报名时间：</td>
+                <td class="hei">2016-01-14 09:38</td>
+            </tr>
+            <tr>
+                <td align="right">备注：</td>
+                <td class="hei"></td>
+            </tr>
+            </tbody></table>
+    </div>
+    <div data-widget="tabs" class="m tabs">
+        <form action="gsyh.html" method="post" target="_blank" id="pay_form">
+            <input type="hidden" value="29970" name="orderid">
+            <div class="mt">
+                <ul class="tab">
+                    <li data-widget="tab-item" class="curr">银行卡</li>
+                    <li data-widget="tab-item" class="">支付平台</li>
+                </ul>
+            </div>
+            <div class="mc">
+                <div id="tab01" data-widget="tab-content" class="tabcon" style="display: block;">
+                    <h6 class="subtit">请选择银行(支持网银与快捷支付)</h6>
+                    <div class="list-bank">
+                        <ul>
+                            <li node-type="bankcode" id="ICBC">
+                                <input type="radio" id="icbc-1" class="jdradio" value="icbc" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="工商银行" src="../images/icbc_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" id="CCB" class="">
+                                <input type="radio" id="bank_CCB" class="jdradio" value="ccb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="建设银行" src="../images/ccb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="CMB">
+                                <input type="radio" id="bank_CMB" class="jdradio" value="cmb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="招商银行" src="../images/cmb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="ABC">
+                                <input type="radio" id="bank_ABC" class="jdradio" value="abc" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="农业银行" src="../images/abc_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="BCOM">
+                                <input type="radio" id="bank_BCM" class="jdradio" value="bocom" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="中国交通银行" src="../images/bcom_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="GDB">
+                                <input type="radio" id="bank_GDB" class="jdradio" value="gdb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="广东发展银行" src="../images/gdb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="BOC">
+                                <input type="radio" id="bank_BOC" class="jdradio" value="boc" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="中国银行" src="../images/boc_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="CMBC">
+                                <input type="radio" id="bank_CMBC" class="jdradio" value="cmbc" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="中国民生银行" src="../images/cmbc_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="HXB">
+                                <input type="radio" id="bank_HXB" class="jdradio" value="hxb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="华夏银行" src="../images/hxb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="CEB">
+                                <input type="radio" id="bank_CEB" class="jdradio" value="ceb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="中国光大银行" src="../images/ceb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="POST">
+                                <input type="radio" id="bank_POST" class="jdradio" value="psbc" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="邮政储蓄" src="../images/post_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="CITIC">
+                                <input type="radio" id="bank_CITIC" class="jdradio" value="cncb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="中信银行" src="../images/citic_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="SPDB">
+                                <input type="radio" id="bank_SPDB" class="jdradio" value="spdb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="浦东发展银行" src="../images/spdb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="SDB">
+                                <input type="radio" id="bank_SDB" class="jdradio" value="cib" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="兴业银行" src="../images/sdb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="BOB">
+                                <input type="radio" id="bank_BOB" class="jdradio" value="bccb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="北京银行" src="../images/bob_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="PAB">
+                                <input type="radio" id="bank_PAB" class="jdradio" value="pab" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="平安银行" src="../images/pab_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="SHB">
+                                <input type="radio" id="bank_SHB" class="jdradio" value="bos" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="上海银行" src="../images/shb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="SRCB">
+                                <input type="radio" id="bank_SRCB" class="jdradio" value="srcb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="上海农商行" src="../images/srcb_1301.png"> </label>
+                            </li>
+                            <li node-type="bankcode" class="" id="BJRCB">
+                                <input type="radio" id="bank_BJRCB" class="jdradio" value="brcb" name="bankcode" node-type="unionpay">
+                                <label> <img width="100" height="23" alt="北京农商银行" src="../images/wzcb_1301.png"> </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--工商银行-->
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="ICBC">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型 </th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center">月累计限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="6">工商银行</td>
+                            <td align="center" rowspan="6">所有卡</td>
+                            <td align="center">工银e支付</td>
+                            <td align="center">1000</td>
+                            <td align="center">/</td>
+                            <td align="center">5000</td>
+                            <td align="center" rowspan="6">95588</td>
+                        </tr>
+                        <tr>
+                            <td align="center">U盾</td>
+                            <td align="center">100万</td>
+                            <td align="center">100万</td>
+                            <td align="center">/</td>
+                        </tr>
+                        <tr>
+                            <td align="center">工银密码器</td>
+                            <td align="center">50万</td>
+                            <td align="center">100万</td>
+                            <td align="center">/</td>
+                        </tr>
+                        <tr>
+                            <td align="center">电子银行口令卡<br>
+                                （未开通手机短信认证）</td>
+                            <td align="center">500</td>
+                            <td align="center">1000</td>
+                            <td align="center">/</td>
+                        </tr>
+                        <tr>
+                            <td align="center">电子银行口令卡<br>
+                                （已开通手机短信认证）</td>
+                            <td align="center">2000</td>
+                            <td align="center">5000</td>
+                            <td align="center">/</td>
+                        </tr>
+                        <tr>
+                            <td align="center">柜面注册存量<br>
+                                静态密码客户</td>
+                            <td align="center">300</td>
+                            <td align="center">300</td>
+                            <td align="center">/</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--工商银行结束-->
+
+                    <!--建设银行-->
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="CCB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型 </th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">建设银行</td>
+                            <td align="center">储蓄卡</td>
+                            <td align="center">网银盾</td>
+                            <td align="center">50万</td>
+                            <td align="center">50万</td>
+                            <td align="center" rowspan="3">95533</td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">储蓄卡<br>
+                                贷记卡</td>
+                            <td align="center">动态口令</td>
+                            <td align="center">1000</td>
+                            <td align="center">1000</td>
+                        </tr>
+                        <tr>
+                            <td align="center">账号支付</td>
+                            <td align="center"> 1000</td>
+                            <td align="center">1000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--建设银行结束-->
+
+                    <!--招商银行-->
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="CMB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">招商银行</td>
+                            <td align="center" rowspan="2">一卡通</td>
+                            <td align="center">大众版</td>
+                            <td align="center">500</td>
+                            <td align="center">500</td>
+                            <td align="center" rowspan="3">95555</td>
+                        </tr>
+                        <tr>
+                            <td align="center">专业版</td>
+                            <td align="center">无限额</td>
+                            <td align="center">无限额</td>
+                        </tr>
+                        <tr>
+                            <td align="center">信用卡</td>
+                            <td align="center">/</td>
+                            <td align="center">500</td>
+                            <td align="center">自行设置</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!--招商银行结束-->
+                    <!--中国农业银行-->
+
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="ABC">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">中国农业银行</td>
+                            <td align="center" rowspan="2">储蓄卡<br>
+                                准贷记卡</td>
+                            <td align="center">电子口令卡</td>
+                            <td align="center">1000</td>
+                            <td align="center">3000</td>
+                            <td align="center" rowspan="2">95599</td>
+                        </tr>
+                        <tr>
+                            <td align="center">USBKey</td>
+                            <td align="center">无限额</td>
+                            <td align="center">无限额</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--中国农业银行结束-->
+                    <!--中国银行-->
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="BOC">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center">中国银行</td>
+                            <td align="center">所有卡</td>
+                            <td align="center">令牌</td>
+                            <td align="center">5万(可自定)</td>
+                            <td align="center">10万(可自定)</td>
+                            <td align="center">95566</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--中国银行结束-->
+                    <!--交通银行-->
+
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="BCOM">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="4">交通银行</td>
+                            <td align="center" rowspan="2">储蓄卡<br>
+                                准贷记卡</td>
+                            <td align="center">手机注册用户</td>
+                            <td align="center">5000</td>
+                            <td align="center">5000</td>
+                            <td align="center" rowspan="4">95559</td>
+                        </tr>
+                        <tr>
+                            <td align="center">证书认证用户</td>
+                            <td align="center">5万</td>
+                            <td align="center">5万</td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">信用卡</td>
+                            <td align="center">手机注册用户</td>
+                            <td align="center">5千元与信用卡本身限额孰低为准</td>
+                            <td align="center">5千元与信用卡本身限额孰低为准</td>
+                        </tr>
+                        <tr>
+                            <td align="center">证书认证用户</td>
+                            <td align="center">1万元与信用卡本身限额孰低为准</td>
+                            <td align="center">1万元与信用卡本身限额孰低为准</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--交通银行结束-->
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="POST">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">邮政储蓄银行</td>
+                            <td align="center" rowspan="3">活期结算存折<br>
+                                储蓄卡</td>
+                            <td align="center">手机短信客户</td>
+                            <td align="center">1万</td>
+                            <td align="center">1万</td>
+                            <td align="center" rowspan="3">95580</td>
+                        </tr>
+                        <tr>
+                            <td align="center">电子令牌</td>
+                            <td align="center">20万</td>
+                            <td align="center">20万</td>
+                        </tr>
+                        <tr>
+                            <td align="center">UKey+短信</td>
+                            <td align="center">200万</td>
+                            <td align="center">200万</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="CITIC">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">中信银行</td>
+                            <td align="center">理财宝卡（储蓄卡）</td>
+                            <td align="center" rowspan="2">证书客户</td>
+                            <td align="center">无限额</td>
+                            <td align="center">无限额</td>
+                            <td align="center" rowspan="2">95558</td>
+                        </tr>
+                        <tr>
+                            <td align="center">中信信用卡</td>
+                            <td align="center">500</td>
+                            <td align="center">无限额</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="CEB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">光大银行</td>
+                            <td align="center" rowspan="3">储蓄卡<br>
+                                信用卡<br>
+                                活期一本通<br>
+                                (网银专业版)</td>
+                            <td align="center">手机动态密码</td>
+                            <td align="center">5000</td>
+                            <td align="center">5000</td>
+                            <td align="center" rowspan="3">95595</td>
+                        </tr>
+                        <tr>
+                            <td align="center">令牌动态密码</td>
+                            <td align="center">50万</td>
+                            <td align="center">50万</td>
+                        </tr>
+                        <tr>
+                            <td align="center">阳光网盾</td>
+                            <td align="center">50万</td>
+                            <td align="center">50万</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="SPDB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="4">浦东发展银行</td>
+                            <td align="center" rowspan="2">储蓄卡</td>
+                            <td align="center">数字证书</td>
+                            <td align="center">无限额</td>
+                            <td align="center">无限额</td>
+                            <td align="center" rowspan="4">95528</td>
+                        </tr>
+                        <tr>
+                            <td align="center">动态密码</td>
+                            <td align="center">5万</td>
+                            <td align="center">20万</td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">信用卡</td>
+                            <td align="center">数字证书</td>
+                            <td align="center">1000元</td>
+                            <td align="center">5000元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">动态密码</td>
+                            <td align="center">1000元</td>
+                            <td align="center">5000元</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="GDB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="4">广发银行</td>
+                            <td align="center" rowspan="2">储蓄卡</td>
+                            <td align="center">Key盾</td>
+                            <td align="center">3000</td>
+                            <td align="center">3000</td>
+                            <td align="center" rowspan="4">400-830-8003</td>
+                        </tr>
+                        <tr>
+                            <td align="center">动态密码</td>
+                            <td align="center">3000</td>
+                            <td align="center">3000</td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">信用卡</td>
+                            <td align="center">Key盾</td>
+                            <td align="center">3000</td>
+                            <td align="center">3000</td>
+                        </tr>
+                        <tr>
+                            <td align="center">动态密码</td>
+                            <td align="center">3000</td>
+                            <td align="center">3000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="PAB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">平安银行</td>
+                            <td align="center">储蓄卡</td>
+                            <td align="center" rowspan="2">无限制</td>
+                            <td align="center">50000元</td>
+                            <td align="center">50000元</td>
+                            <td align="center" rowspan="2">95511—3</td>
+                        </tr>
+                        <tr>
+                            <td align="center">信用卡</td>
+                            <td align="center">20000元</td>
+                            <td align="center">20000元</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="CMBC">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="4">民生银行</td>
+                            <td align="center" rowspan="4">储蓄卡<br>
+                                信用卡</td>
+                            <td align="center">大众版</td>
+                            <td align="center">300</td>
+                            <td align="center">300</td>
+                            <td align="center" rowspan="4">95568</td>
+                        </tr>
+                        <tr>
+                            <td align="center">贵宾版</td>
+                            <td align="center">5000</td>
+                            <td align="center">5000</td>
+                        </tr>
+                        <tr>
+                            <td align="center">U宝用户</td>
+                            <td align="center">50万</td>
+                            <td align="center">50万</td>
+                        </tr>
+                        <tr>
+                            <td align="center">信用卡用户</td>
+                            <td align="center">同柜面对外转账限额</td>
+                            <td align="center">同柜面对外转账限额</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="SHB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center" colspan="2">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center">每月限额（元）</th>
+                            <th align="center">备注</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="6">上海银行</td>
+                            <td align="center" rowspan="3">储蓄卡</td>
+                            <td align="center" rowspan="2">网银客户</td>
+                            <td align="center">办理E盾证书版个人网银，开通网上支付功能</td>
+                            <td align="center">50万元</td>
+                            <td align="center">100万元</td>
+                            <td align="center">—</td>
+                            <td align="center" rowspan="2">限额范围内客户可自行设置单笔/日累计限额</td>
+                            <td align="center" rowspan="6">95594</td>
+                        </tr>
+                        <tr>
+                            <td align="center">办理动态密码版个人网银（含文件证书），开通网上支付功能</td>
+                            <td align="center">6000元</td>
+                            <td align="center">1万元</td>
+                            <td align="center">—</td>
+                        </tr>
+                        <tr>
+                            <td align="center">上银快付客户</td>
+                            <td align="center">使用上银快付业务的客户</td>
+                            <td align="center">2000元</td>
+                            <td align="center">—</td>
+                            <td align="center">5000元</td>
+                            <td align="center">—</td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">信用卡</td>
+                            <td align="center" rowspan="2">网银客户</td>
+                            <td align="center">办理E盾证书版个人网银，开通网上支付功能</td>
+                            <td align="center">5万元</td>
+                            <td align="center">信用卡本身透支额度</td>
+                            <td align="center">—</td>
+                            <td align="center" rowspan="2">限额范围内客户可自行设置单笔/日累计限额</td>
+                        </tr>
+                        <tr>
+                            <td align="center">办理动态密码版个人网银（含文件证书），开通网上支付功能</td>
+                            <td align="center">6000元</td>
+                            <td align="center">1万元</td>
+                            <td align="center">—</td>
+                        </tr>
+                        <tr>
+                            <td align="center">上银快付客户</td>
+                            <td align="center">使用上银快付业务的客户</td>
+                            <td align="center">2000元</td>
+                            <td align="center">—</td>
+                            <td align="center">5000元</td>
+                            <td align="center">—</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="SDB">
+                        <tbody>
+                        <tr>
+                            <th align="center">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">兴业银行</td>
+                            <td align="center" rowspan="2">所有卡</td>
+                            <td align="center">储蓄卡</td>
+                            <td align="center">持卡人自行设置</td>
+                            <td align="center">持卡人自行设置</td>
+                            <td align="center" rowspan="2">95561</td>
+                        </tr>
+                        <tr>
+                            <td align="center">信用卡</td>
+                            <td align="center">以信用卡额度为准</td>
+                            <td align="center">以信用卡额度为准</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="BOB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">北京银行</td>
+                            <td align="center" rowspan="3">储蓄卡</td>
+                            <td align="center">普通版</td>
+                            <td align="center">300</td>
+                            <td align="center">300</td>
+                            <td align="center" rowspan="3">95526</td>
+                        </tr>
+                        <tr>
+                            <td align="center">动态密码版</td>
+                            <td align="center">1000</td>
+                            <td align="center">5000</td>
+                        </tr>
+                        <tr>
+                            <td align="center">证书版</td>
+                            <td align="center">100万</td>
+                            <td align="center">100万</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="HXB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">华夏银行</td>
+                            <td align="center" rowspan="3">储蓄卡</td>
+                            <td align="center">普通支付</td>
+                            <td align="center">300元</td>
+                            <td align="center">1000元</td>
+                            <td align="center" rowspan="3">95577</td>
+                        </tr>
+                        <tr>
+                            <td align="center">手机动态验证</td>
+                            <td align="center">1000元</td>
+                            <td align="center">5000元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">数字证书验证</td>
+                            <td align="center">5万</td>
+                            <td align="center">10万</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"><strong>注意事项：</strong>使用华夏银行E商宝网上支付，请先在华夏银行营业网点或网上银行进行签约手续。已经开通华夏银行个人网银功能的客户，可直接在网上银行进行签约手续，如使用华夏盾的客户，请在插上华夏盾之后再在网上银行进行签约手续。 </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="SRCB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th align="center">客户类型</th>
+                            <th align="center">单笔限额（元）</th>
+                            <th align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">上海农商银行</td>
+                            <td align="center" rowspan="2">所有卡</td>
+                            <td align="center">个人网银短信专业版</td>
+                            <td align="center">1000元</td>
+                            <td align="center">5000元</td>
+                            <td align="center" rowspan="2">021-962999</td>
+                        </tr>
+                        <tr>
+                            <td align="center">个人网银证书专业版</td>
+                            <td align="center">1万元</td>
+                            <td align="center">500万元</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="display: none;" data-all='all' class="BJRCB">
+                        <tbody>
+                        <tr>
+                            <th align="center" class="aa">银行</th>
+                            <th align="center">开通范围</th>
+                            <th width="25%" align="center">客户类型</th>
+                            <th width="21%" align="center">单笔限额（元）</th>
+                            <th width="19%" align="center">每日限额（元）</th>
+                            <th align="center" class="bb">客服热线</th>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="4">北京农商银行</td>
+                            <td align="center" rowspan="4">储蓄卡、活期一本通</td>
+                            <td align="center">直连支付-手机认证</td>
+                            <td align="center">10万元</td>
+                            <td align="center">50万元</td>
+                            <td align="center" rowspan="4">96198</td>
+                        </tr>
+                        <tr>
+                            <td align="center">直连支付-证书认证</td>
+                            <td align="center">20万元</td>
+                            <td align="center">100万元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">网银专业版支付-手机认证</td>
+                            <td align="center">10万元</td>
+                            <td align="center">50万元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">网银专业版支付-证书认证</td>
+                            <td align="center">20万元</td>
+                            <td align="center">100万元</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div data-widget="tab-content" class="tabcon hide" style="display: none;">
+                    <h6 class="subtit">支持网银与其他平台支付方式</h6>
+                    <ul class="list-bank">
+                        <li node-type="payitem" class="">
+                            <input type="radio" class="jdradio" id="chinapay" value="chinapay" name="paytype">
+                            <label> <img width="100" height="23" alt="中国银联有卡支付" title="中国银联有卡支付" src="../images/99bill_1301.png"> </label>
+                        </li>
+                        <li node-type="payitem" class="">
+                            <input type="radio" class="jdradio" id="unionpay" value="unionpay" name="paytype">
+                            <label> <img width="100" height="23" alt="中国银联无卡支付" title="中国银联无卡支付" src="../images/unionpay_1301.png"> </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <h6 class="subtit">
+                    <label><input id="service" name="" type="checkbox" value=""> </label>&nbsp;本人已认真阅读
+                    <a style="color:#FF6600;" href="javascript:;" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block';">《学员网上支付协议书》</a>
+
+                </h6>
+
+                <input type="submit" value="" class="btn001">
+                <input type="button" value="" id="edit" class="btn003">
+            </div>
+        </form>
+    </div>
+    <script>
+        /*function openagreement(){
+            $('#body_show').show();
+            $('.logi-box').show();
+        }
+
+        (function($) {
+            var unionpayItemsElement = $('input[node-type="unionpay"]');
+            var bankCodePanelElement = $('[node-type="bankcode"]');
+            var icbcElement          = $('#icbc');
+            var icbcPanelElement     = $('#select_ICBC');
+            var payItemElement = $('[node-type="payitem"]');
+            //unionpayItems.click()
+
+            payItemElement.find('input[type="radio"]').attr('checked', false);
+            unionpayItemsElement.each(function() {
+                $(this).attr('checked', false);
+            });
+
+            var selectElement = function(target) {
+                if (target.attr('node-type') == 'bankcode') {
+                    payItemElement.each(function() {
+                        $(this).find('input[type="radio"]').attr('checked', false);
+                    });
+                } else if (target.attr('node-type') == 'payitem') {
+                    unionpayItemsElement.each(function() {
+                        $(this).attr('checked', false);
+                    });
+                }
+            };
+
+            bankCodePanelElement.bind('click', function() {
+                selectElement($(this));
+            });
+
+            payItemElement.bind('click', function() {
+                selectElement($(this));
+            });
+
+            $('#pay_form').submit(function() {
+                var isValid = true;
+                var serviceEle = $('#service');
+
+                if (payItemElement.find('input[type="radio"]:checked').length == 0
+                        && unionpayItemsElement.filter(':checked').length == 0) {
+                    wip.getWindow().setMsg('请选择支付方式').setType("warning").show().close(2000);
+                    isValid = false;
+                } else if (serviceEle.get(0).checked == false) {
+                    wip.getWindow().setMsg('请先阅读《公交驾校学员网上支付协议书》').setType("warning").show().close(2000);
+                    isValid = false;
+                }
+
+                return isValid;
+            });
+        })(jQuery);
+
+        function serviceNo(type) {
+            $('#service').get(0).checked = !!type;
+        }*/
+
+    </script>
+    <div class="clear"></div>
+</div>
+</body>
+<script>
+    $(function () {
+        //支付选项卡
+        var tabitem=$('[data-widget="tab-item"]');
+        var tabshow=$('.tabcon');
+        tabitem.click(function () {
+            tabitem.removeClass('curr');
+            $(this).addClass('curr');
+            tabshow.hide();
+            $(tabshow[$(this).index('[data-widget="tab-item"]')]).show();
+        })
+        //选择银行
+        var liitem=$('[node-type="bankcode"]');
+        var liitem1=$('[node-type="payitem"]');
+        var tables=$('[data-all="all"]');
+        liitem.click(function () {
+            liitem.removeClass('select');
+            $(this).addClass('select');
+            var i=$(this).attr('id');
+            //$(this).children('.jdradio').attr('checked','true');
+            $(this).children('.jdradio')[0].checked=true;
+            //$('.jdradio').attr('checked','false');
+            tables.hide();
+            $('table[class='+i+']').show();
+        })
+        liitem1.click(function () {
+            liitem1.removeClass('select');
+            $(this).addClass('select');
+            $(this).children('.jdradio').attr('checked','checked');
+        })
+    })
+</script>
+</html>

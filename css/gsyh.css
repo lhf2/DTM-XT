@@ -1,0 +1,83 @@
+html,body,ul,li,p,table,h1,h2,h3,h4,h5,h6,tr,td{margin:0;padding:0}
+img{border:none}
+a{text-decoration: none}
+ul,li{list-style: none;}
+body{font-family: 'Microsoft yahei'}
+.pagetopdiv{
+    width:1050px;
+    margin:0 auto;
+    text-align: center;
+}
+.maindiv{display: inline}
+.logodiv{
+    height: 40px;margin:10px auto;
+}
+#orderzonediv{border: 1px solid #999}
+table{color: #333333}
+table a {color:#000}
+table a:hover{color: #2278ca}
+.infoheader{width: 100%;height: 30px;background-color: rgb(231,231,231)}
+.titlefont{text-align: left;font-family: 'Microsoft yahei';font-size: 14px;font-weight: bold;}
+#ebankpaydiv{margin-top: 50px;}
+#ebankpaydiv .mt {
+    background-color: #F7F7F7;
+    border: solid #DDDDDD;
+    border-width: 1px 1px 0;
+    height: 30px;
+    line-height: 30px;
+    overflow: visible;
+    width: 1050px;
+}
+#ebankpaydiv .mt .tab .curr {
+    border: solid #999;
+    border-width: 2px 2px 0;
+    height: 38px;
+    background-color: #fff;
+    line-height: 37px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin:-8px 0px -1px 0px;
+    padding: 0 8px;
+}
+#ebankpaydiv .mt .tab li{
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    font: 16px/29px "microsoft yahei";
+    color: #666666;
+    cursor: pointer;
+}
+#ebankpaydiv .mt .tab .small-curr{
+    font-size: 12px;
+    margin: 0 8px;
+}
+#ebankpaydiv .mc-show{
+    border: 2px solid #999;
+    background-color: #FFF;
+    padding: 20px;
+}
+#ebankpaydiv .mc .descfont{
+    width: 920px;color: #333;font-size: 14px;text-align: left;margin: 10px auto;margin-left: 5px;
+}
+#ebankpaydiv .mc input{
+    width: 165px;
+    height: 23px;
+    border: 1px solid #707070;
+}
+#ebankpaydiv .mc input:focus{
+    border: none;
+}
+#ebankpaydiv .mc .next-btn{
+    width: 90px;height: 30px;background: #C7000B;color: #fff;text-align: center;line-height: 30px;font-size: 14px;
+}
+.bottomtipdiv{
+    width: 100%;margin-top: 20px;font-size: 12px;color: #666;text-align: left;
+}
+.bottomtipdiv div{
+    margin-top: 5px;
+}
+#bottomTipsDiv{line-height: 20px;}
+.descfont{color: #333333}
+.hide{display: none}
+.show{display: block!important;}

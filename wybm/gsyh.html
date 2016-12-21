@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国工商银行</title>
+    <link rel="stylesheet" href="../css/gsyh.css"/>
+    <script src="../js/jquery-1.11.2.js"></script>
+</head>
+<body>
+    <div class="pagetopdiv" id="pagetopdiv">
+        <div class="maindiv" id="maindiv">
+            <!--logo开始-->
+            <div class="logodiv" id="logodiv">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td width="60%" style="text-align: left">
+                                <img height="40" src="../images/iconpay.jpg" alt=""/>
+                            </td>
+                            <td width="40%" style="text-align:right">
+                                <a href="javascript:;">限额提示</a>
+                                |
+                                <a href="javascript:;">支付帮助</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--订单信息 开始-->
+            <div id="orderzonediv">
+                <table width="100%" style="border-collapse: collapse;">
+                    <tbody>
+                        <tr class="infoheader">
+                            <td class="titlefont" colSpan="6">订单信息</td>
+                        </tr>
+                        <tr height="10"></tr>
+                        <tr>
+                            <td width="10%" align="right" style="font-size: 12px;">商户名称：</td>
+                            <td width="30%" style="overflow: hidden; white-space: normal; word-break: break-all; word-wrap: break-word;text-align: left">中国银联</td>
+                            <td width="10%" align="right" style="font-size: 12px;">商户名称：</td>
+                            <td width="47%" style="text-align: left">北京公交驾校报名费 </td>
+                            <td width="3%"></td>
+                        </tr>
+                        <tr height="10"></tr>
+                        <tr>
+                            <td width="10%" align="right" style="font-size: 12px;">订单时间：</td>
+                            <td width="30%" style="overflow: hidden; white-space: normal; word-break: break-all; word-wrap: break-word;text-align: left">2016-01-14 13:52:12 </td>
+                            <td width="10%" align="right" style="font-size: 12px;">订单号：</td>
+                            <td width="47%" style="text-align: left">12016011400000000000006533825</td>
+                            <td width="3%"></td>
+                        </tr>
+                        <tr height="10"></tr>
+                        <tr>
+                            <td width="10%" align="right" style="font-size: 12px;">商品数量：</td>
+                            <td width="30%" style="overflow: hidden; white-space: normal; word-break: break-all; word-wrap: break-word;text-align: left">1</td>
+                            <td width="10%" align="right" style="font-size: 12px;">商品编号：</td>
+                            <td width="47%" style="text-align: left">--</td>
+                            <td width="3%"></td>
+                        </tr>
+                        <tr height="10"></tr>
+                        <tr>
+                            <td width="10%" align="right" style="font-size: 12px;">金额：</td>
+                            <td width="30%" style="overflow: hidden; white-space: normal; word-break: break-all; word-wrap: break-word;text-align: left;color: red;font-weight: bold">RMB 600.00</td>
+                        </tr>
+                        <tr height="10"></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--付款方式 开始-->
+            <div id="ebankpaydiv">
+                <div class="mt">
+                    <ul class="tab">
+                        <li class="small-curr">付款方式</li>
+                        <li data-widget="tab-item" class="curr">快捷支付</li>
+                        <li data-widget="tab-item" class="">网银支付</li>
+                    </ul>
+                </div>
+                <div class="mc">
+                    <div class="mc-show">
+                        <div class="descfont">您可以输入已开通工银e支付的卡（账）号后六位、手机号进行支付。如果您尚未开通工银e支付，可使用柜面预留手机号及完整卡（账）号直接支付并注册。未在柜面预留过手机号的客户，您也可以输入全卡号及手机号，通过验证U盾等介质来完成支付及注册。
+                        </div>
+                        <table width="100%" align="center">
+                            <tbody>
+                            <tr>
+                                <td width="30%" align="right">手机号码：</td>
+                                <td width="15%">
+                                    <input id="epaymobile_h" type="text" size="19" maxLength="11"/>
+                                </td>
+                                <td width="55%"></td>
+                            </tr>
+                            <tr height="10"></tr>
+                            <tr>
+                                <td width="30%" align="right">卡（账）号后六位/别名：</td>
+                                <td width="15%">
+                                    <input type="text" size="19" maxLength="11"/>
+                                </td>
+                                <td width="55%"></td>
+                            </tr>
+                            <tr height="10"></tr>
+                            <tr>
+                                <td width="30%" align="right"></td>
+                                <td width="15%">
+                                    <input type="button" class="next-btn" value="下一步"/>
+                                </td>
+                                <td width="55%"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mc-show hide">
+                        <div class="descfont">使用工行网银付款</div>
+                        <table width="90%">
+                            <tbody>
+                                <tr>
+                                    <td width="35%" height="25" align="right" id="inputName" noWrap="">卡（账）号：</td>
+                                    <td width="15%">
+                                        <input name="paycard_h" id="paycard_h" type="text" size="19" maxLength="19"/>
+                                    </td>
+                                    <td width="50%" style="text-align: left;">
+                                        <img width="150" height="40" src="../images/icbc.jpg" style="margin-left: 7px;"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="30%" align="right"></td>
+                                    <td width="15%">
+                                        <input type="button" class="next-btn" value="下一步">
+                                    </td>
+                                    <td width="55%"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--提示信息 开始-->
+            <div class="bottomtipdiv" id="bottomtipdiv">
+                <div class="descfont">提示信息：</div>
+                <div id="bottomTipsDiv" style="text-align: left; color: #666666; font-size: 12px;">
+                    1.请您确认该页面地址以https开头，并核对浏览器地址栏是否有挂锁或其它安全标识。<br/>
+                    2.支付时请不要开启远程协助功能，避免他人操作您的计算机。如有疑问，请咨询95588。
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //付款方式选项卡
+    $(function(){
+        var tabitem=$('[data-widget="tab-item"]');
+        var tabshow=$('.mc-show');
+        tabitem.click(function () {
+            tabitem.removeClass('curr');
+            $(this).addClass('curr');
+            tabshow.hide();
+            $(tabshow[$(this).index('[data-widget="tab-item"]')]).show();
+        })
+    })
+</script>
+</html>
